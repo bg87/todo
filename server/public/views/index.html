@@ -8,10 +8,18 @@
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
   </head>
   <body>
-    <form class="newTodo">
-      <input type="text" name="new" placeholder="Add a To do!"/>
-      <button class="add">Add To do</button>
-    </form>
-    <button>Delete Completed</button>
+    <div class="container">
+      <main>
+        <form class="newTodo">
+          <input class="addInput" type="text" name="new" placeholder="Add a To do!"/>
+          <input type="hidden" name="complete" value="false">
+          <button class="add">Add To do</button>
+        </form>
+        <button class="delete">Delete Completed</button>
+        <section class="todos">
+
+        </section>
+      </main>
+    </div>
   </body>
 </html>

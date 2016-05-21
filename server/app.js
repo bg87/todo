@@ -1,9 +1,11 @@
-var express    =  require('express');
+var express    = require('express');
 var app        = express();
 var path       = require('path');
 var bodyParser = require('body-parser');
+var todo       = require('./routes/todo');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/todo', todo);
 
 app.get('/*', function (req, res) {
   var file = req.params[0] || '/views/index.html';

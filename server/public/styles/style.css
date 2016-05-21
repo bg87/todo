@@ -1,0 +1,57 @@
+.container {
+  width:80%;
+  margin: auto;
+  margin-top:50px;
+  margin-bottom:50px;
+  letter-spacing: 2px;
+}
+
+main {
+  width: 40%;
+  margin: auto;
+}
+
+button {
+  font-weight: bold;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
+}
+
+.add {
+  color: #3085d9;
+  border: solid 1px #3085d9;
+  background-color: white;
+}
+.add:hover {
+  color: #0357ab;
+  border: solid 1px #0357ab;
+  background-color: white;
+}
+
+.delete {
+  color: #fb1313;
+  border: solid 1px #fb1313;
+  background-color: white;
+}
+.delete:hover {
+  color: #a10202;
+  border: solid 1px #a10202;
+  background-color: white;
+}
+
+.todos div{
+  margin: 20px;
+}
+.todos div:hover {
+  cursor: pointer;
+}
+
+.complete {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.incomplete {
+
+}
