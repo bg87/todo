@@ -13,8 +13,8 @@ $(document).ready(function () {
 
 function deleteCompleted () {
   $.ajax({
-		type: 'DELETE',
-		url: '/todo',
+		type   : 'DELETE',
+		url    : '/todo',
 		success: function() {
 			appendTodos();
 		}
@@ -31,11 +31,11 @@ function completed (element) {
      element.removeClass("incomplete").addClass("complete");
   }
   $.ajax({
-    type     : 'PUT',
-    url      : '/todo',
-    data     : id,
-    success  : function () {
-      appendTodos();
+    type   : 'PUT',
+    url    : '/todo',
+    data   : id,
+    success: function () {
+
      }
   });
 }
@@ -64,7 +64,7 @@ function addTodo () {
 		todo[field.name] = field.value;
 	});
   if (todo.new == "") {
-    $('.addInput').attr('placeholder', "You have to add a todo!")
+    $('.addInput').attr('placeholder', "You have to enter a todo!")
   } else {
   $.ajax({
 		type   : 'POST',

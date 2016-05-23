@@ -34,10 +34,10 @@ router.post('/', function (req, res) {
 });
 
 router.put('/', function (req, res) {
+  console.log(req.body);
+  if (req.body.bool == "true") {
   pg.connect(connectionString, function (err, client, done) {
-    console.log(req.body);
-    if (req.body.bool) {
-    client.query('UPDATE todos SET complete = true  WHERE id =' + req.body.id,
+    client.query('UPDATE todos SET complete = TRUE  WHERE id =' + req.body.id + ';',
       function(err, result){
         done();
         if (err) {
@@ -47,8 +47,10 @@ router.put('/', function (req, res) {
         }
         res.sendStatus(200);
       });
-    } else {
-      client.query('UPDATE todos SET complete = false  WHERE id =' + req.body.id,
+    });
+  } else {
+    pg.connect(connectionString, function (err, client, done) {
+      client.query('UPDATE todos SET complete = FALSE  WHERE id =' + req.body.id + ';',
         function(err, result){
           done();
           if (err) {
@@ -58,8 +60,8 @@ router.put('/', function (req, res) {
           }
           res.sendStatus(200);
         });
+      });
     }
-  });
 });
 
 router.delete('/', function (req, res) {

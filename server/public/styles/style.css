@@ -1,3 +1,6 @@
+body {
+  background-image: url('/images/concrete_seamless.png');
+}
 .container {
   width:80%;
   margin: auto;
@@ -7,7 +10,7 @@
 }
 
 main {
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 
@@ -18,26 +21,49 @@ button {
   border-radius: 8px;
 }
 
+.addInput {
+  display: block;
+  width: 80%;
+  height: 75px;
+  margin:auto;
+  border-radius:8px;
+  border: 2px solid gray;
+  background-color: rgba(0, 0, 0, 0);
+}
+.todos {
+  width: 80%;
+  margin:auto;
+  text-align: center;
+}
+
+.buttons {
+  width: 80%;
+  margin:auto;
+  text-align: center;
+}
+
 .add {
-  color: #3085d9;
-  border: solid 1px #3085d9;
-  background-color: white;
+  color: gray;
+  border: solid 2px gray;
+  background-color: rgba(0, 0, 0, 0);
+  transition:0.3s;
 }
 .add:hover {
-  color: #0357ab;
-  border: solid 1px #0357ab;
-  background-color: white;
+  color:black;
+  border: solid 2px black;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .delete {
-  color: #fb1313;
-  border: solid 1px #fb1313;
-  background-color: white;
+  color: gray;
+  border: solid 2px gray;
+  background-color: rgba(0, 0, 0, 0);
+  transition:0.3s;
 }
 .delete:hover {
-  color: #a10202;
-  border: solid 1px #a10202;
-  background-color: white;
+  color: black;
+  border: solid 2px black;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .todos div{
@@ -50,8 +76,4 @@ button {
 .complete {
   color: gray;
   text-decoration: line-through;
-}
-
-.incomplete {
-
 }
